@@ -70,6 +70,7 @@
     <Compile Include="Assets\SampleScenes\UnityAssets\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\UnityAssets\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\UnityAssets\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Script\RestartLevel.cs" />
     <Compile Include="Assets\Script\SimpleCharacterControl.cs" />
     <Compile Include="Assets\Scripts\DamageArea.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
