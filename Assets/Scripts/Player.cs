@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 /*
     Script: Player
@@ -11,8 +12,25 @@ public class Player : MonoBehaviour
 {
     // Properties
     public float health = 10f;                      // Total amount of health the player has.
-    public int score;                               // This player's score.
+    public int score;
+    public int maxScore = 5;
+    // This player's score.
+    public ExpBar expBar;
+    int level;
+    public Text currentLevel;
+    
+   
 
+
+
+    void Start()
+    {
+        score = 0;
+        expBar.SetZeroExp(score);
+        level = 0;
+        currentLevel.text = "Level : 0";
+        
+    }
     // Methods
     public void TakeDamage( float amountOfDamage )
     {
@@ -44,9 +62,20 @@ public class Player : MonoBehaviour
         if( pickup != null )
         {
             this.score += pickup.scoreValue;
+            expBar.SetExp(score);
+            if (score >= maxScore)
+            {
+                level += 1;
+                currentLevel.text = "Level : " + level.ToString();
+                score = 0;
+                expBar.SetZeroExp(score);
+               
+            }
 
             // Destroy the pickup.
             Destroy( collider.gameObject );
         }
     }
+    
+    
 }

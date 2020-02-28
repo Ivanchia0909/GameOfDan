@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ExpBar.cs" />
     <Compile Include="Assets\SampleScenes\UnityAssets\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\UnityAssets\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\UnityAssets\Menu\Scripts\SceneAndURLLoader.cs" />
